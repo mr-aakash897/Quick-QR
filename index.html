@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QR Generator</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <!-- Premium Assets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Core Engines -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+</head>
+<body>
+
+    <!-- Background Layer (Always Persistent) -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Global Interface -->
+    <button id="theme-toggle" class="floating-toggle" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+    </button>
+
+    <div class="app-shell">
+        <!-- Configuration Side -->
+        <aside class="sidebar">
+            <header class="brand">
+                <div class="logo-box"><i class="bi bi-qr-code"></i></div>
+                <h1>QUICK-QR</h1>
+            </header>
+
+            <div class="config-scroller">
+                <div class="control-group">
+                    <label><i class="bi bi-link-45deg"></i> Data to encode</label>
+                    <input type="text" id="qr-data" placeholder="URL or Text..." >
+                </div>
+
+                <div class="control-grid">
+                    <div class="control-group">
+                        <label><i class="bi bi-palette"></i> Encode Color</label>
+                        <input type="color" id="qr-color" value="#000000">
+                    </div>
+                    <div class="control-group">
+                        <label><i class="bi bi-grid-3x3"></i> Style</label>
+                        <select id="qr-dots">
+                            <option value="extra-rounded">Futuristic</option>
+                            <option value="dots">Circular</option>
+                            <option value="square">Standard</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label><i class="bi bi-patch-check"></i> Corner Shape</label>
+                    <select id="qr-corners">
+                        <option value="extra-rounded">Rounded</option>
+                        <option value="dot">Dot</option>
+                        <option value="square">Sharp</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label><i class="bi bi-image"></i> Logo Overlay URL</label>
+                    <input type="text" id="qr-logo" placeholder="https://image-link.png">
+                </div>
+
+                <button id="update-btn" class="main-btn">Generate QR</button>
+            </div>
+        </aside>
+
+        <!-- Preview Stage -->
+        <main class="preview-stage">
+            <div class="qr-wrapper">
+                <div id="qr-canvas"></div>
+            </div>
+
+            <div class="download-cluster">
+                <button class="dl-btn" data-ext="png"><i class="bi bi-download"></i> PNG</button>
+                <button class="dl-btn" data-ext="svg"><i class="bi bi-vector-pen"></i> SVG</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
