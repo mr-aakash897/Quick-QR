@@ -42,7 +42,7 @@ It allows users to instantly generate QR codes from text or URLs in a clean, mod
 
 ## 🌐 Live Demo
 
-👉 a3n-quick-qr.netlify.app
+👉 [a3n-quick-qr.netlify.app](https://a3n-quick-qr.netlify.app/)
 
 ## 🎯 Use Cases
 - Quick QR generation for links or text
