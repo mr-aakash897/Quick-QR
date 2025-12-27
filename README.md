@@ -61,20 +61,3 @@ It allows users to instantly generate QR codes from text or URLs in a clean, mod
 This project is licensed under the MIT License.
 
 ⭐ If you like this project, consider giving it a star!
-
----
-
-## ✅ Why This README Is Good
-- Clean and professional
-- Recruiter-friendly
-- Accurate (generator-only)
-- Works perfectly on GitHub & VS Code
-- Matches your **Quick-QR** branding
-
-If you want, I can also:
-- Add **badges** (HTML, JS, Three.js)
-- Customize it for **internship submissions**
-- Write a **project description for resume**
-- Optimize wording for **ATS keywords**
-
-Tell me what you want next.
