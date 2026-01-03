@@ -1,8 +1,3 @@
-/** 
- * SENIOR ARCHITECT: NEURAL-QR STUDIO ENGINE 
- * Concept: Persistent Background + Scalable Matrix Generator
- */
-
 class BackgroundEngine {
     constructor() {
         this.canvas = document.getElementById('canvas-bg');
@@ -24,7 +19,7 @@ class BackgroundEngine {
 
         // Neural Plexus Geometry
         const geo = new THREE.BufferGeometry();
-        const count = 1000;
+        const count = 30000;
         const pos = new Float32Array(count * 3);
         for(let i=0; i < count * 3; i++) {
             pos[i] = (Math.random() - 0.5) * 15;
